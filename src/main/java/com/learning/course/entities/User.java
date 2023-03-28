@@ -3,15 +3,34 @@ package com.learning.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class User implements Serializable{
-    
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_user") // user é uma palavra reservada do h2
+public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String name;
     private String email;
     private String phone;
     private String password;
 
-    public User(){}
+    public User() {
+    }
+
+    public User(String name, String email, String phone, String password) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
 
     public long getId() {
         return this.id;
@@ -53,14 +72,6 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    public User(long id, String name, String email, String phone, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -69,7 +80,8 @@ public class User implements Serializable{
             return false;
         }
         User user = (User) o;
-        return id == user.id && Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(phone, user.phone) && Objects.equals(password, user.password);
+        return id == user.id && Objects.equals(name, user.name) && Objects.equals(email, user.email)
+                && Objects.equals(phone, user.phone) && Objects.equals(password, user.password);
     }
 
     @Override
