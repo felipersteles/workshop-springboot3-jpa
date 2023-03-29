@@ -24,4 +24,8 @@ public class UserService {
 
         return obj.get();
     };
+
+    public User createUser(User user){
+        return userRepository.save(user);
+    }
 }
