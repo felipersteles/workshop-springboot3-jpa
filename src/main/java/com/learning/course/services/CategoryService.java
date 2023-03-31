@@ -25,7 +25,7 @@ public class CategoryService {
         return obj.get();
     };
 
-    public Category createUser(Category user){
-        return categoryRepository.save(user);
+    public Category createCategory(Category category){
+        return categoryRepository.save(category);
     }
 }
