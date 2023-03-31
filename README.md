@@ -1,5 +1,9 @@
 # Learning spring bott
 
+## Anotacoes
+### ENUM
+É bom controlar manualmente o code para que seja mais facil a manuntenção do codigo
+
 ## JPA
 Ferramenta de mapeamento de objeto-relacional padrão do Java. Em outras palavras esta ferramenta converte o modelo de orientação a objetos para o modelo relacional do Banco de dados.
 ### Anotações do JPA
