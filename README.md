@@ -15,6 +15,7 @@ Ferramenta de mapeamento de objeto-relacional padrão do Java. Em outras palavra
 @GeneratedValue -> Gera automaticamente a PK
 @Table -> define no nome da tabela sql
 @Transient -> JPA nao ler linha seguinte
+@Embeddable -> classe auxiliar para ser uma chave primaria composta
 
 ### Tipos de associação
 - Um para muitos: 
@@ -28,6 +29,9 @@ Ferramenta de mapeamento de objeto-relacional padrão do Java. Em outras palavra
 ## Detalhes
 ### ISO 8601
 Muito importante padronizar a data do projeto. Neste projeto estamos utilizando o UTC (Z no final)
+
+### Pacote PK
+Criando uma classe auxiliar para ser uma chave primaria composta
 
 ### Erro no jackson
 - Jackson 
