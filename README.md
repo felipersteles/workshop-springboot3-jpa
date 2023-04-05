@@ -26,6 +26,10 @@ Ferramenta de mapeamento de objeto-relacional padrão do Java. Em outras palavra
 * No um
 @OneToMany(mappedBy = "[nome da variavel]")
 
+
+- Um para um:
+na classe dependente: @MapsId
+
 ## Detalhes
 ### ISO 8601
 Muito importante padronizar a data do projeto. Neste projeto estamos utilizando o UTC (Z no final)
