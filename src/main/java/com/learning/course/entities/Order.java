@@ -7,7 +7,6 @@ import java.util.Objects;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.learning.course.enums.OrderStatus;
 
 import jakarta.persistence.CascadeType;
@@ -34,7 +33,6 @@ public class Order implements Serializable {
 
     private Integer orderStatus;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
